@@ -5,13 +5,13 @@ import { SupportedTemplate, ITemplateContent } from "../types/type";
  */
 export const templates: Record<SupportedTemplate, ITemplateContent> = {
   vue2: {
-    url: 'https://github.com/Tencent/tdesign-vue-starter.git',
+    url: 'https://github.com/Tencent/tdesign-vue-starter/tree/main',
     description: 'TDesign Vue2 Starter',
     downloadUrl: 'direct:https://service-5ds77c8c-1257786608.hk.apigw.tencentcs.com/release/tdesign-vue-starter?download=true',
     routerData: 'https://service-5ds77c8c-1257786608.hk.apigw.tencentcs.com/release/vue-starter-router?download=true'
   },
   vue3: {
-    url: 'https://github.com/Tencent/tdesign-vue-next-starter.git',
+    url: 'https://github.com/Tencent/tdesign-vue-next-starter/tree/main',
     description: 'TDesign Vue3 Starter',
     downloadUrl: 'direct:https://service-5ds77c8c-1257786608.hk.apigw.tencentcs.com/release/tdesign-vue-next-starter?download=true',
     fePermissionDownloadUrl:
@@ -19,19 +19,19 @@ export const templates: Record<SupportedTemplate, ITemplateContent> = {
     routerData: 'https://service-5ds77c8c-1257786608.hk.apigw.tencentcs.com/release/vue-next-starter-router?download=true'
   },
   react: {
-    url: 'https://github.com/Tencent/tdesign-react-starter.git',
+    url: 'https://github.com/Tencent/tdesign-react-starter/tree/main',
     description: 'TDesign React Starter',
     downloadUrl: 'direct:https://service-5ds77c8c-1257786608.hk.apigw.tencentcs.com/release/tdesign-react-starter?download=true',
     routerData: 'https://service-5ds77c8c-1257786608.hk.apigw.tencentcs.com/release/react-starter-router?download=true'
   },
   miniProgram: {
-    url: 'https://github.com/Tencent/tdesign-miniprogram-starter-retail.git',
+    url: 'https://github.com/Tencent/tdesign-miniprogram-starter-retail/tree/main',
     description: 'TDesign MiniProgram Starter Retail',
     downloadUrl: 'direct:https://service-5ds77c8c-1257786608.hk.apigw.tencentcs.com/release/tdesign-miniprogram-starter-retail?download=true',
     routerData: '' // don't need
   },
   mobileVue: {
-    url: 'https://github.com/TdesignOteam/tdesign-mobile-vue-starter-chat.git',
+    url: 'https://github.com/TdesignOteam/tdesign-mobile-vue-starter-chat/tree/main',
     description: 'TDesign Mobile Starter Chat',
     downloadUrl: 'direct:https://service-5ds77c8c-1257786608.hk.apigw.tencentcs.com/release/tdesign-mobile-starter-chat?download=true',
     routerData: '' // don't need

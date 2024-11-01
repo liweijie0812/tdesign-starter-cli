@@ -6,7 +6,7 @@ import typescript from 'typescript';
 import json from '@rollup/plugin-json';
 import terser from '@rollup/plugin-terser';
 import rollupTypescript from '@rollup/plugin-typescript';
-import pkg from './package.json' assert  { type: 'json' };
+import pkg from './package.json' with  { type: 'json' };
 import copy from 'rollup-plugin-copy';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';

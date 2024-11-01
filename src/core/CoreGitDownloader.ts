@@ -1,3 +1,4 @@
+import { spawnSync } from 'child_process';
 import fs from 'fs';
 import download from 'download-git-repo';
 import ora from 'ora';
@@ -146,7 +147,7 @@ export class CoreGitDownloader {
     } catch (error) {
       console.log('write file error==', error);
     }
-
+    const usePackageManager = this.getUsePackageManager();
     console.log();
     console.log(chalk.green('👏 初始化项目完成！👏'));
     console.log();
@@ -154,9 +155,9 @@ export class CoreGitDownloader {
     console.log(chalk.blue(`  # 进入项目`));
     console.log(chalk.blue(`  $ cd ./${options.name}`));
     console.log(chalk.blue(`  # 安装依赖`));
-    console.log(chalk.blue(`  $ npm install`));
+    console.log(chalk.blue(`  $ ${usePackageManager} install`));
     console.log(chalk.blue(`  # 运行`));
-    console.log(chalk.blue(`  $ npm run dev`));
+    console.log(chalk.blue(`  $ ${usePackageManager} run dev`));
     console.log();
   }
 
@@ -185,5 +186,20 @@ export class CoreGitDownloader {
         }
       });
     });
+  }
+
+  /**
+   * 获取常用包管理器, 优先顺序 pnpm > yarn > npm
+   */
+  private getUsePackageManager() {
+    if (spawnSync('pnpm', ['--version']).status === 0) {
+      return 'pnpm';
+    }
+
+    if (spawnSync('yarn', ['--version']).status === 0) {
+      return 'yarn';
+    }
+
+    return 'npm';
   }
 }
